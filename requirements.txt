@@ -1,7 +1,7 @@
-streamlit
-numpy
-pandas
-scikit-learn
-tensorflow
-pickle
-joblib
+streamlit==1.32.0
+tensorflow-cpu==2.12.0
+scikit-learn==1.3.0
+numpy==1.23.5
+pandas==1.5.3
+pillow==9.5.0
+h5py==3.8.0
