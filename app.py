@@ -15,9 +15,14 @@ h1, h2, h3, h4, h5, h6, label, p, span {
     color: white !important;
 }
 
-/* DO NOT change input and selectbox text */
-input, select, textarea {
-    color: black !important;
+/* Make number input text white*/
+input[type="number] {
+    color: white !important;
+}
+
+/*keep checkbox text unchanged*/
+input[type="checkbox"] {
+    accent-color: #00BFFF;
 }
 
 </style>
@@ -330,5 +335,6 @@ elif mode == "Fusion Mode":
             st.error("Risk Level: High Risk")
 
         else:
+
 
             st.success("Risk Level: Low Risk")
