@@ -10,8 +10,14 @@ import base64
 # ---------------- LOGIN CONFIG ---------------- #
 
 USER_CREDENTIALS = {
-    "doctor": {"password": "doc123", "role": "Doctor"},
-    "staff": {"password": "staff123", "role": "Healthcare Staff"}
+    "doctor": {
+        "password": st.secrets["auth"]["doctor_password"],
+        "role": "Doctor"
+    },
+    "staff": {
+        "password": st.secrets["auth"]["staff_password"],
+        "role": "Healthcare Staff"
+    }
 }
 
 if "logged_in" not in st.session_state:
@@ -364,4 +370,5 @@ elif mode == "Fusion Mode":
 
 
             st.success("Risk Level: Low Risk")
+
 
