@@ -7,6 +7,16 @@ from tensorflow.keras.preprocessing import image
 import streamlit as st
 import base64
 
+# ---------------- LOGIN CONFIG ---------------- #
+
+USER_CREDENTIALS = {
+    "doctor": {"password": "doc123", "role": "Doctor"},
+    "staff": {"password": "staff123", "role": "Healthcare Staff"}
+}
+
+if "logged_in" not in st.session_state:
+    st.session_state.logged_in = False
+
 st.markdown("""
 <style>
 
@@ -86,6 +96,22 @@ clinical_model = joblib.load("clinical_model.pkl")
 
 scaler = joblib.load("scaler.pkl")
 
+if not st.session_state.logged_in:
+
+    st.title("Healthcare Login")
+
+    username = st.text_input("Username")
+    password = st.text_input("Password", type="password")
+
+    if st.button("Login"):
+
+        if username in USER_CREDENTIALS and password == USER_CREDENTIALS[username]["password"]:
+            st.session_state.logged_in = True
+            st.rerun()
+        else:
+            st.error("Invalid username or password")
+
+    st.stop()
 
 # Title
 
@@ -338,3 +364,4 @@ elif mode == "Fusion Mode":
 
 
             st.success("Risk Level: Low Risk")
+
