@@ -55,7 +55,7 @@ def set_bg(image_file):
 
     .stApp {{
         background-image: url("data:image/jpg;base64,{encoded}");
-        background-size: contain;
+        background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -371,6 +371,7 @@ elif mode == "Fusion Mode":
 
 
             st.success("Risk Level: Low Risk")
+
 
 
 
