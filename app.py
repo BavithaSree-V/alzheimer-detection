@@ -65,7 +65,7 @@ def set_bg(image_file):
     h1 {{
         color: #ffffff;
         text-align: center;
-        font-size: 50px;
+        font-size: 80px;
         font-weight: bold;
     }}
 
@@ -73,7 +73,7 @@ def set_bg(image_file):
     label {{
         font-weight: bold;
         color: white;
-        font-size: 18px;
+        font-size: 30px;
     }}
 
     /* Button styling */
@@ -370,5 +370,6 @@ elif mode == "Fusion Mode":
 
 
             st.success("Risk Level: Low Risk")
+
 
 
