@@ -54,7 +54,7 @@ def set_bg(image_file):
     <style>
 
     .stApp {{
-        background-image: url("data:image/jpg;base64,{encoded}");
+        background-image: url("data:image/jpeg;base64,{encoded}");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -92,7 +92,7 @@ def set_bg(image_file):
 
 
 # call function
-set_bg("medical_bg.jpg")
+set_bg("medical_bg.jpeg")
 
 # Load Models (Fusion Logic)
 
@@ -370,6 +370,7 @@ elif mode == "Fusion Mode":
 
 
             st.success("Risk Level: Low Risk")
+
 
 
 
