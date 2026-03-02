@@ -55,7 +55,7 @@ def set_bg(image_file):
 
     .stApp {{
         background-image: url("data:image/jpg;base64,{encoded}");
-        background-size: cover;
+        background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -80,7 +80,8 @@ def set_bg(image_file):
     .stButton>button {{
         background-color: #ff4b4b;
         color: white;
-        font-size: 18px;
+        font-size: 20px;
+        font-weight: bold;
         border-radius: 10px;
         padding: 10px 20px;
     }}
@@ -370,6 +371,7 @@ elif mode == "Fusion Mode":
 
 
             st.success("Risk Level: Low Risk")
+
 
 
 
