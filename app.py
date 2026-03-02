@@ -27,7 +27,7 @@ st.markdown("""
 <style>
 
 /* Make headings and labels white */
-h1, h2, h3, h4, h5, h6, label, p, span {
+h1, h2, h3, h4, h5, h6, label {
     color: white !important;
 }
 
@@ -370,6 +370,7 @@ elif mode == "Fusion Mode":
 
 
             st.success("Risk Level: Low Risk")
+
 
 
 
