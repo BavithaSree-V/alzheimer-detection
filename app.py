@@ -218,9 +218,9 @@ elif mode == "Clinical Mode":
     hyper = st.selectbox("Hypertension", ["No", "Yes"])
     hyper = 1 if hyper == "Yes" else 0
 
-    mmse = st.slider("MMSE Score", 0,30)
+    mmse = st.number_input("MMSE Score", min_value=0, max_value = 30, step=1 )
 
-    functional = st.number_input("Functional Assessment", 0,10)
+    functional = st.number_input("Functional Assessment", min_value=0, max_value = 10, step=1)
 
     memory = st.selectbox("Memory Complaints", ["No", "Yes"])
     memory = 1 if memory == "Yes" else 0
@@ -378,6 +378,7 @@ elif mode == "Dual Mode":
 
 
             st.success("Risk Level: Low Risk")
+
 
 
 
