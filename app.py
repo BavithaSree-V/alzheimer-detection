@@ -129,14 +129,16 @@ st.markdown("<h1 style= 'color:White;'> Alzheimer Detection System</h1>", unsafe
 
 mode = st.radio("Select Mode",
 
-                ["MRI Mode", "Clinical Mode", "Fusion Mode"])
+                ["MRI Mode", "Clinical Mode", "Dual Mode"])
 
 
 # MRI Mode
 
 if mode == "MRI Mode":
 
-    file = st.file_uploader("Upload MRI Image", type=["jpg","png"])
+    st.header("MRI Based Stage Classification")
+
+    file = st.file_uploader("Upload MRI Image", type=["jpg","png","jpeg"])
 
     if file:
 
@@ -173,14 +175,19 @@ if mode == "MRI Mode":
 
 elif mode == "Clinical Mode":
 
-    st.header("Clinical Based Alzheimer Risk Assessment")
+    st.header("Clinical Based Risk Assessment")
 
     age = st.number_input("Age", min_value=0)
 
     gender = st.selectbox("Gender", ["Male", "Female"])
     gender = 1 if gender == "Male" else 0
 
-    education = st.number_input("Education Level", min_value=0)
+    education = st.selectbox("Education Level", ["Non Educated", "SSLC", "HSC", "Higher studies"] )
+    education = {"Non Educated" : 0, 
+                 "SSLC" : 1,
+                 "HSC" : 2, 
+                 "Higher studies" : 3
+                }[education] 
 
     smoking = st.selectbox("Smoking", ["No", "Yes"])
     smoking = 1 if smoking == "Yes" else 0
@@ -265,16 +272,16 @@ elif mode == "Clinical Mode":
 
 # Fusion Mode
 
-elif mode == "Fusion Mode":
+elif mode == "Dual Mode":
 
-    st.header("Fusion Mode: Stage + Risk Prediction")
+    st.header("Dual Mode")
 
     col1, col2 = st.columns(2)
 
     # MRI INPUT
     with col1:
         st.subheader("MRI Analysis")
-        file = st.file_uploader("Upload MRI Image", type=["jpg","png"])
+        file = st.file_uploader("Upload MRI Image", type=["jpg","png","jpeg"])
 
 
     # CLINICAL INPUTS
@@ -371,6 +378,7 @@ elif mode == "Fusion Mode":
 
 
             st.success("Risk Level: Low Risk")
+
 
 
 
