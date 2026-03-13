@@ -95,7 +95,7 @@ def set_bg(image_file):
 # call function
 set_bg("medical_bg.jpeg")
 
-# Load Models (Fusion Logic)
+# Load Models (Dual Logic)
 
 mri_model = load_model("mri_model.h5")
 
@@ -378,6 +378,7 @@ elif mode == "Dual Mode":
 
 
             st.success("Risk Level: Low Risk")
+
 
 
 
