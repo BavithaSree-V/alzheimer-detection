@@ -270,7 +270,7 @@ elif mode == "Clinical Mode":
 
         st.info(f"Confidence: {confidence:.2f}%")
 
-# Fusion Mode
+# Dual Mode
 
 elif mode == "Dual Mode":
 
@@ -378,6 +378,7 @@ elif mode == "Dual Mode":
 
 
             st.success("Risk Level: Low Risk")
+
 
 
 
