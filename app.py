@@ -127,7 +127,7 @@ st.markdown("<h1 style= 'color:black;'> Alzheimer Detection System</h1>", unsafe
 
 # Mode Selection
 
-mode = st.radio("Select Mode", "<h1 style= 'color:black; </h1>"
+mode = st.radio("Select Mode", 
 
                 ["MRI Mode", "Clinical Mode", "Dual Mode"])
 
