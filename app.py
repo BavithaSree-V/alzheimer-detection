@@ -31,6 +31,12 @@ h1, h2, h3, h4, h5, h6, label {
     color: black !important;
 }
 
+/* Change radio button option text colour*/
+div[role="radiogroup"] label {
+    color: black !important;
+    font-weight: 600;
+}
+
 /* Make number input text white*/
 input[type="number] {
     color: black !important;
