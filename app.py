@@ -298,12 +298,17 @@ elif mode == "Dual Mode":
         gender = st.selectbox("Gender", ["Male", "Female"])
         gender = 1 if gender == "Male" else 0
         education = st.number_input("Education Level")
+        education = {"Non Educated" : 0, 
+                 "SSLC" : 1,
+                 "HSC" : 2, 
+                 "Higher studies" : 3
+                }[education] 
         smoking = st.selectbox("Smoking", ["No", "Yes"])
         smoking = 1 if smoking == "Yes" else 0
-        alcohol = st.number_input("Alcohol Consumption")
-        physical = st.number_input("Physical Activity")
-        diet = st.number_input("Diet Quality")
-        sleep = st.number_input("Sleep Quality")
+        alcohol = st.number_input("Alcohol Consumption", min_value=0, max_value= 10, step=1)
+        physical = st.number_input("Physical Activity", min_value=0, max_value= 10, step=1)
+        diet = st.number_input("Diet Quality", min_value=0, max_value= 10, step=1)
+        sleep = st.number_input("Sleep Quality", min_value=0, max_value= 10, step=1)
         family = st.selectbox("Family History", ["No", "Yes"])
         family = 1 if family == "Yes" else 0
         cardio = st.selectbox("Cardiovascular Disease", ["No", "Yes"])
@@ -316,8 +321,8 @@ elif mode == "Dual Mode":
         headinjury = 1 if headinjury == "Yes" else 0
         hyper = st.selectbox("Hypertension", ["No", "Yes"])
         hyper = 1 if hyper == "Yes" else 0
-        mmse = st.number_input("MMSE")
-        functional = st.number_input("Functional Assessment")
+        mmse = st.number_input("MMSE",min_value=0, max_value= 30, step=1)
+        functional = st.number_input("Functional Assessment", min_value=0, max_value= 10, step=1)
         memory = st.selectbox("Memory Complaints", ["No", "Yes"])
         memory = 1 if memory == "Yes" else 0
         behavior = st.selectbox("Behavioral Problems", ["No", "Yes"])
