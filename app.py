@@ -122,12 +122,12 @@ if not st.session_state.logged_in:
 
 # Title
 
-st.markdown("<h1 style= 'color:White;'> Alzheimer Detection System</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style= 'color:black;'> Alzheimer Detection System</h1>", unsafe_allow_html=True)
 
 
 # Mode Selection
 
-mode = st.radio("Select Mode",
+mode = st.radio("Select Mode", "<h1 style= 'color:black; </h1>"
 
                 ["MRI Mode", "Clinical Mode", "Dual Mode"])
 
