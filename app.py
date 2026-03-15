@@ -297,12 +297,12 @@ elif mode == "Dual Mode":
         age = st.number_input("Age")
         gender = st.selectbox("Gender", ["Male", "Female"])
         gender = 1 if gender == "Male" else 0
-        education = st.number_input("Education Level")
+        education = st.selectbox("Education Level", ["Non Educated", "SSLC", "HSC", "Higher studies"] )
         education = {"Non Educated" : 0, 
-                 "SSLC" : 1,
-                 "HSC" : 2, 
-                 "Higher studies" : 3
-                }[education] 
+                     "SSLC" : 1,
+                     "HSC" : 2, 
+                     "Higher studies" : 3
+                    }[education] 
         smoking = st.selectbox("Smoking", ["No", "Yes"])
         smoking = 1 if smoking == "Yes" else 0
         alcohol = st.number_input("Alcohol Consumption", min_value=0, max_value= 10, step=1)
