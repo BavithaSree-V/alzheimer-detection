@@ -6,7 +6,7 @@ Features
 
 * MRI Mode → Predict Alzheimer Stage
 * Clinical Mode → Predict Alzheimer Risk
-* Dual Mode → Combined Prediction
+* Dual Mode → Decision Logic
 * Streamlit Frontend Interface
 
 Technologies Used
