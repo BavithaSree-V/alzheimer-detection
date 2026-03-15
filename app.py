@@ -28,12 +28,12 @@ st.markdown("""
 
 /* Make headings and labels white */
 h1, h2, h3, h4, h5, h6, label {
-    color: white !important;
+    color: black !important;
 }
 
 /* Make number input text white*/
 input[type="number] {
-    color: white !important;
+    color: black !important;
 }
 
 /*keep checkbox text unchanged*/
@@ -63,7 +63,7 @@ def set_bg(image_file):
 
     /* Make title bold and colored */
     h1 {{
-        color: #ffffff;
+        color: black;
         text-align: center;
         font-size: 80px;
         font-weight: bold;
@@ -72,14 +72,14 @@ def set_bg(image_file):
     /* Make labels bold */
     label {{
         font-weight: bold;
-        color: white;
+        color: black;
         font-size: 30px;
     }}
 
     /* Button styling */
     .stButton>button {{
         background-color: #ff4b4b;
-        color: white;
+        color: black;
         font-size: 20px;
         font-weight: bold;
         border-radius: 10px;
